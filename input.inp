@@ -1,0 +1,26 @@
+
+'''
+   :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+   :                                                                       :
+   :                              FluxCount                              	 :
+	 :                                                                       :
+   : Developed by:         Sanjeev Kumar Gautam                       		 :
+   :                                                                       :
+   :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+'''
+ENTRY z (Angstroms)
+-30.0
+EXIT z (Angstroms)
+30
+Radius of the pore (Angstroms)
+270.5
+Number of Bins
+100
+Total Number of Nup (polymer) residues
+160
+Number of Nup monomers
+53120
+First dump file number
+7
+No. of Frames in each output file (#Multiple files: the first has 2 frames, second has 3 frames)
+2

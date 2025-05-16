@@ -1,0 +1,32 @@
+ 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+                     Flux Calculation       
+ 
+                  All Rights Reserved  
+ 
+        developed by: Sanjeev Kumar Gautam 
+ 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+ Date: Fri May 16 19:38:33 EDT 2025  
+ 
+ ... removing monomer_DP.txt in 'run' directory
+ 
+ ... running run.py
+Input read!!!
+Loaded frame 1 from ../dump/dump-prod-pol-7.lmp
+Loaded frame 2 from ../dump/dump-prod-pol-7.lmp
+53120
+...
+Writing output...
+...
+Total Atoms in the bins: 8928.50
+#############################################################
+Integration = 8928.50000  Proportion = 0.00313  r = 270.50000  factor = 0.37  Density_sum = 8.755483  Total_density = 0.0467324243
+Sum of all proportions = 1.00 (should be ≈ 1)
+############################### Results Written ##############################
+Output Written!!
+Function 'main' finished in 0.20 seconds
+ 
+ 

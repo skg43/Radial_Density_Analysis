@@ -1,0 +1,11 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Logs and output
+*.log
+monomer_DP.txt
+
+# OS files
+.DS_Store
