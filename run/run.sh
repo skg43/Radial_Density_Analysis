@@ -11,7 +11,7 @@ echo " "
 liner=`echo "     +++++++++++++++++++++++++++++++++++++++++++++++++++++++"`
 echo $liner
 echo " "
-echo "                     Flux Calculation       "
+echo "                     Redial Densirty Calculation       "
 echo " "
 echo "                  All Rights Reserved  "
 echo " "
