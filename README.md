@@ -85,7 +85,7 @@ radius   normalized_density   density   proportion   cumulative_proportion
 bash run.sh
 ```
 
-5. Output will be saved to `monomer_DP.txt`.
+5. Output will be saved to `particle_DP.txt`.
 
 ---
 
