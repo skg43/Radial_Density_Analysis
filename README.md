@@ -1,67 +1,103 @@
-# Radial Density Profile in a Nanopore
+# Radial Density Analysis in a Nanopore
 
-This project computes the radial density profile of particles confined within a nanopore, using atomic coordinate data from LAMMPS molecular dynamics simulations.  
-It performs cylindrical shell binning over a central z-section and outputs a normalized density distribution.
+This repository contains scripts to compute the **radial density profile (DP)** of molecules (e.g., **Nup monomers**, **NTF2**, and **Kap proteins**) confined in a **cylindrical nanopore**, using **LAMMPS molecular dynamics** trajectory files as input.
+
+Snapshots from simulations are analyzed to extract spatial distributions of particles across the radial direction (_r_) within a central axial slice of the pore (_z ∈ [−3 nm, 3 nm]_).
 
 ---
 
-## 📁 Project Structure
+## 📂 Repository Structure
 
 ```
 Radial_Density_Analysis/
-├── input.inp                # Input file with number of frames per LAMMPS dump
-├── dump/                    # Directory containing LAMMPS trajectory files
+├── input.inp               # Input file with frame count per trajectory
+├── dump/                   # Folder for LAMMPS dump files (*.lmp)
 ├── run/
-│   ├── run.sh               # Shell script to launch analysis
-│   ├── run.log              # Sample log (optional)
-│   └── monomer_DP.txt       # Output: radial density data
+│   ├── run.sh              # Shell script to launch analysis
+│   ├── run.log             # Sample log output
+│   └── monomer_DP.txt      # Output: radial density data
 ├── src/
 │   ├── Globals.py
 │   ├── ParseFrames.py
 │   ├── Reports.py
 │   ├── ReadInput.py
-│   └── run.py               # Main pipeline controller
+│   └── run.py              # Main analysis controller
 ```
 
 ---
 
-## 🚀 How to Run
+## 🧪 Scientific Background
 
-1. Make sure you have Python 3 installed.
-2. Edit `input.inp` to specify number of frames in each trajectory file.
-3. Place your LAMMPS dump files (e.g., `dump-prod-pol-*.lmp`) in the `dump/` folder.
-4. Execute the workflow:
+This analysis quantifies how biomolecules distribute radially in the central region of a nanopore, which is critical for understanding selective transport mechanisms through crowded, confined environments such as the **nuclear pore complex (NPC)**.
 
-```bash
-cd run
-bash run.sh
-```
+### 📉 What It Computes
 
-5. The output radial density data will be written to `run/monomer_DP.txt`.
+- Radial density distribution of specified molecules (e.g., FG-Nups, NTF2, Kapβ1)  
+- Normalized density profile over cylindrical shells  
+- Integrated cumulative density and occupancy  
+
+### 📏 Analysis Region
+
+Only molecules within a central region of the pore (**−3 nm < z < 3 nm**) are considered for density calculations.
 
 ---
 
-## 📊 Output Format (`monomer_DP.txt`)
+## 📐 Normalization Equation
 
-Each line contains:
+The radial density profile \( \psi(r) \) is normalized using the following condition:
+
+\[
+2 \pi L \int_0^R \psi(r) \, r \, dr = N
+\]
+
+Where:
+- \( L \) is the length of the central region along the z-axis (here, 6 nm)
+- \( r \) is the radial distance from the pore center (cylinder axis)
+- \( N \) is the average number of molecules in the central region
+- \( \psi(r) \) is the number density at distance \( r \)
+
+---
+
+## 📋 Output Format (`monomer_DP.txt`)
+
+Each line contains the following columns:
+
 ```
 radius   normalized_density   density   proportion   cumulative_proportion
 ```
 
-- `radius`: radial distance from pore center
-- `normalized_density`: density / total density
-- `density`: raw shell density
-- `proportion`: fraction of atoms in shell
-- `cumulative_proportion`: integrated radial occupancy
+- **radius**: distance from center of pore  
+- **normalized_density**: normalized ψ(r)  
+- **density**: raw molecule count in shell  
+- **proportion**: shell's share of total molecule count  
+- **cumulative_proportion**: integrated radial occupancy
 
 ---
 
-## 🧠 Scientific Context
+## ⚙️ How to Run
 
-This method quantifies how particles distribute radially within a nanopore cross-section, useful for understanding confinement effects in soft matter, polymer, or protein transport simulations.
+1. Ensure Python 3 is installed.
+2. Edit `input.inp` to specify the number of frames in each LAMMPS trajectory file.
+3. Place `.lmp` files in the `dump/` directory.
+4. From the `run/` directory, run:
+
+```bash
+bash run.sh
+```
+
+5. Output will be saved to `monomer_DP.txt`.
 
 ---
 
-## 📄 License
+## 🧠 Applications
 
-This project is licensed under the MIT License. See `LICENSE` for details.
+This code can be used to:
+- Analyze biomolecular crowding in confined systems
+- Compare density distributions between different transport proteins
+- Support publications and visualization of density plots (e.g., Fig. 6A)
+
+---
+
+## 📜 License
+
+MIT License
