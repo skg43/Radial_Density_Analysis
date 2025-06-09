@@ -10,18 +10,20 @@ Snapshots from simulations are analyzed to extract spatial distributions of part
 
 ```
 Radial_Density_Analysis/
-├── input.inp               # Input file with frame count per trajectory
-├── dump/                   # Folder for LAMMPS dump files (*.lmp)
+├── input.inp                      # Input file with frame count per trajectory
+├── dump/                          # Folder for LAMMPS dump files (*.lmp)
 ├── run/
-│   ├── run.sh              # Shell script to launch analysis
-│   ├── run.log             # Sample log output
-│   └── monomer_DP.txt      # Output: radial density data
+│   ├── run.sh                     # Shell script to launch analysis
+│   ├── run.log                    # Sample log output
+│   ├── monomer_DP.txt             # Output: radial density data
+│   ├── plot.py                    # Script to plot radial density profile
+│   └── particle_density_profile.png  # Plot output from plot.py
 ├── src/
 │   ├── Globals.py
 │   ├── ParseFrames.py
 │   ├── Reports.py
 │   ├── ReadInput.py
-│   └── run.py              # Main analysis controller
+│   └── run.py                     # Main analysis controller
 ```
 
 ---
@@ -84,6 +86,23 @@ bash run.sh
 ```
 
 5. Output will be saved to `monomer_DP.txt`.
+
+---
+
+### 📊 Plotting Radial Density
+
+To visualize the radial density profile:
+
+```bash
+cd run
+python3 plot.py
+```
+
+This will generate:
+
+- `particle_density_profile.png`: Plot of ψ(r) vs radius
+
+The plot uses scientific styling (`rc`, `pylab`, `numpy`) with customized ticks and figure settings.
 
 ---
 
