@@ -32,5 +32,5 @@ ax.yaxis.set_tick_params(labelsize=12)
 
 # Layout and save
 fig.tight_layout()
-fig.savefig("monomer_density_profile.png", dpi=300)
+fig.savefig("particle_density_profile.png", dpi=300)
 plt.show()
