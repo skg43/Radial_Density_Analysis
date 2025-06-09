@@ -44,13 +44,9 @@ Only molecules within a central region of the pore (**−3 nm < z < 3 nm**) are 
 
 ## 📐 Normalization Equation
 
-![Normalization equation](normalization_equation.png)
-
 The radial density profile ψ(r) is normalized using the condition:
 
-```
-2π L ∫_0^R ψ(r) r dr = N
-```
+![Normalization equation](normalization_equation.png)
 
 Where:
 - **L** is the length of the central region along the z-axis (here, 6 nm)
