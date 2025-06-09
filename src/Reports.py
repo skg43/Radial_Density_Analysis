@@ -35,7 +35,7 @@ def Report(frames, total_frames, atoms_per_frame):
     radial_bin_counts = [0 for _ in range(gl.n_bins + 1)]
 
     # Open output file for writing results
-    output_file = open('../run/monomer_DP.txt', 'w')
+    output_file = open('../run/particle_DP.txt', 'w')
 
     # -----------------------------
     # First pass: Bin particles by radial distance
