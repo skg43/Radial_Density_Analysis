@@ -19,4 +19,4 @@ def main():
 	DP()
 
 if __name__ == '__main__':
-	main() # Entry point for running the flux analysis
+	main() # Entry point for running the Radial Density analysis
