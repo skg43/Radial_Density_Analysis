@@ -12,7 +12,7 @@ rc('lines', mew=1.5)
 rc(('xtick.major', 'xtick.minor', 'ytick.major', 'ytick.minor'), pad=5)
 
 # Load the data
-data = np.loadtxt("monomer_DP.txt")
+data = np.loadtxt("particle_DP.txt")
 
 # Create the plot
 fig, ax = plt.subplots(figsize=(6, 4))
