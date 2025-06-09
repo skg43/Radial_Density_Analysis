@@ -49,8 +49,6 @@ The radial density profile \( \psi(r) \) is normalized using the following condi
 \[
 2π L ∫₀ᴿ ψ(r)·r dr = N
 
-Copy
-Edit
 
 \]
 
