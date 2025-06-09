@@ -44,16 +44,19 @@ Only molecules within a central region of the pore (**−3 nm < z < 3 nm**) are 
 
 ## 📐 Normalization Equation
 
-The radial density profile ( ψ(r) is normalized using the following condition:
+![Normalization equation](normalization_equation.png)
 
-2π L ∫₀ᴿ ψ(r)·r dr = N
+The radial density profile ψ(r) is normalized using the condition:
 
+```
+2π L ∫_0^R ψ(r) r dr = N
+```
 
 Where:
-- \( L \) is the length of the central region along the z-axis (here, 6 nm)
-- \( r \) is the radial distance from the pore center (cylinder axis)
-- \( N \) is the average number of molecules in the central region
-- \( ψ(r) \) is the number density at distance \( r \)
+- **L** is the length of the central region along the z-axis (here, 6 nm)
+- **r** is the radial distance from the pore center (cylinder axis)
+- **N** is the average number of molecules in the central region
+- **ψ(r)** is the number density at distance r
 
 ---
 
@@ -93,6 +96,7 @@ bash run.sh
 This code can be used to:
 - Analyze biomolecular crowding in confined systems
 - Compare density distributions between different transport proteins
+- Support publications and visualization of density plots (e.g., Fig. 6A)
 
 ---
 
