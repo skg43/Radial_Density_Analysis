@@ -35,7 +35,7 @@ This analysis quantifies how biomolecules distribute radially in the central reg
 ### 📉 What It Computes
 
 - Radial density distribution of specified molecules (e.g., FG-Nups, NTF2, Kapβ1)  
-- Normalized density profile over cylindrical shells  
+- Normalized density profile over cylindrical bins/shells  
 - Integrated cumulative density and occupancy  
 
 ### 📏 Analysis Region
