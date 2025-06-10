@@ -1,6 +1,6 @@
 # Radial Density Analysis in a Nanopore
 
-This repository contains scripts to compute the **radial density profile (DP)** of molecules (e.g., **Nup monomers**, **NTF2**, and **Kap proteins**) confined in a **cylindrical nanopore**, using **LAMMPS molecular dynamics** trajectory files as input.
+This repository contains scripts to compute the **radial density profile (DP)** of molecules/particles (e.g., **Nup monomers**, **NTF2**, and **Kap proteins**) confined in a **cylindrical nanopore**, using **LAMMPS molecular dynamics** trajectory files as input.
 
 Snapshots from simulations are analyzed to extract spatial distributions of particles across the radial direction (_r_) within a central axial slice of the pore (_z ∈ [−3 nm, 3 nm]_).
 
