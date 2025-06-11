@@ -15,7 +15,7 @@ Radial_Density_Analysis/
 ├── run/
 │   ├── run.sh                     # Shell script to launch analysis
 │   ├── run.log                    # Sample log output
-│   ├── monomer_DP.txt             # Output: radial density data
+│   ├── particle_DP.txt             # Output: radial density data
 │   ├── plot.py                    # Script to plot radial density profile
 │   └── particle_density_profile.png  # Plot output from plot.py
 ├── src/
