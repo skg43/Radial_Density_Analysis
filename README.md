@@ -111,7 +111,7 @@ The plot uses scientific styling (`rc`, `pylab`, `numpy`) with customized ticks 
 This code can be used to:
 - Analyze biomolecular crowding in confined systems
 - Compare density distributions between different transport proteins
-- Support publications and visualization of density plots (e.g., Fig. 6A)
+- Support publications and visualization of density plots 
 
 ---
 
